@@ -4,3 +4,15 @@ title: Ann's Excuse Generator
 ---
 <h1>About</h1>
 <p>Has someone ever asked you to do something that you definitely don't want to do? Using this tool you don't have to do those things anymore. Now, you can do what you want AND avoid the guilt of not giving other people whatever they want! </p>
+<input onclick="generateExuse()" type="button" value="Generate Excuse"><br><br>
+<p id="result"></p>
+<script>
+    function generateExuse(){
+        var prefix="I would love to but I'm already committed to"
+        var postfix="at that time."
+        const activity = ["gardening", "shopping","splatter painting", "pilates", "eating dinner", "getting desert", "a work meeting", "hosting extended family", "book club"];
+        const companion = ["Carter","Taylor","Jim","Chris", "Peter", "Bella","Erika","Felica","Michael","Jenya","Kyle","Talon","Ryan","Tommy"]
+        const place = ["Vons", "The Old Spaghetti Factory", "Barnes and Nobels","In-n-out", "Armstrong's","the beach","the mall","Target","Hilltop Park"]
+        document.getElementById("result").innerHTML=prefix+" "+activity[Math.floor(Math.random()*activity.length)]+" at "+place[Math.floor(Math.random()*place.length)]+" with "+companion[Math.floor(Math.random()*companion.length)]+" "+postfix
+    }
+</script>
