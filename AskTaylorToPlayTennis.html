@@ -3,4 +3,40 @@ layout: default
 title: Taylor's Tennis Helper
 ---
 <h1>About</h1>
-<p>Do you want to play tennis right now? With this tool the answer is easy to find. Just fill out the form below and it will calculate whether conditions are appropriate according to Taylor's standards.</p>
+<p>Do I want to play tennis? With this tool the answer is easy to find. Just fill out the form below and it will calculate whether conditions are appropriate according to Taylor's standards.</p>
+<p>What is the temperature in Fahrenheit at the court you are playing at?</p>
+<label for="temperature">What is the temperature in Fahrenheit going to be at the court you are playing at?</label>
+<input type="number" id="temperature" name="temperature"><br><br>
+<label for="time">What time are you going to play until?</label>
+<input type="time" id="time" name="time"><br><br>
+<label for="eat">How many minutes ago did you last eat?</label>
+<input type="number" id="eat" name="eat"><br><br>
+<label for="eh">eh?</label>
+<input type="checkbox" id="eh" name="eh"><br><br>
+<input onclick="submission()" type="button" value="Do I want to play Tennis?"><br><br>
+<p id="result"></p>
+<script>
+    function submission(){
+        var result="We can go after we finish this episode of *reality_tv_show*"
+        if(document.getElementById("eh").checked){
+            result="EEEEEEEEEEEAAANNNNNNNNNHHHHHHHUUUNNNHHH"
+        }
+        if(document.getElementById("temperature").value<58){
+            result="FOOL! You'll freeze before you can get on to the court"
+        }
+        if(document.getElementById("temperature").value>80){
+            result="FOOL! The flesh will melt from your bones under the anhilating, unblinking gaze of the sun"
+        }
+        if(document.getElementById("eat").value<30){
+            result="Are you crazy? You just ate! You can't play tennis!"
+        }
+        if(document.getElementById("eat").value>120){
+            result="How about instead of playing tennis you have something to eat before you starve to death?"
+        }
+        if(parseInt(document.getElementById("time").value.replace(":",""))>2000||parseInt(document.getElementById("time").value.replace(":",""))<600){
+            result="So you are going to play tennis while sleeping? In the middle of the night? Insubordinate and churlish! I forbade it."
+        }
+        
+        document.getElementById("result").innerHTML=result
+    }
+</script>
