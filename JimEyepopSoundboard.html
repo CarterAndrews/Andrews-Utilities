@@ -3,4 +3,25 @@ layout: default
 title: Jim's Eyepop Soundboard
 ---
 <h1>About</h1>
-<p>This curated collection of sound effects will take your eyepops to the next level. Make sure to experiment to find the perfect sound effect for every eyepop!</p>
+<p>An eyepop is the sublime moment when you turn the tables in a conversation and sneak attack your victim. This curated collection of sound effects will take your eyepops to the next level. Make sure to experiment to find the perfect sound effect for every eyepop!</p>
+<input onclick="submission('silent.mp3')" type="button" value="Stop"><br><br>
+<input onclick="submission('tiktok.mp3')" type="button" value="Tiktok Eyepop"><br><br>
+<input onclick="submission('oh.mp3')" type="button" value="OOOHHHH Eyepop"><br><br>
+<input onclick="submission('roast.mp3')" type="button" value="Roast Eyepop"><br><br>
+<input onclick="submission('laugh.mp3')" type="button" value="Laughing Eyepop"><br><br>
+<input onclick="submission('slow.mp3')" type="button" value="Slow Eyepop"><br><br>
+<input onclick="submission('surprise.mp3')" type="button" value="Surprise Eyepop"><br><br>
+<input onclick="submission('angry.mp3')" type="button" value="Angry Eyepop"><br><br>
+<input onclick="submission('got-him.mp3')" type="button" value="Got Him Eyepop"><br><br>
+<input onclick="submission('got-em.mp3')" type="button" value="Got Em Eyepop"><br><br>
+<input onclick="submission('doom.mp3')" type="button" value="Doom Eyepop"><br><br>
+<input onclick="submission('sad.mp3')" type="button" value="Sad Eyepop"><br><br>
+<script>
+    var snd = new Audio("tiktok.mp3");
+    function submission(name){
+        snd.pause();
+        snd = new Audio(name);
+        snd.play();
+    }
+    
+</script>
