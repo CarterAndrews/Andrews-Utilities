@@ -13,6 +13,8 @@ title: Taylor's Tennis Helper
 <input type="number" id="eat" name="eat"><br><br>
 <label for="eh">eh?</label>
 <input type="checkbox" id="eh" name="eh"><br><br>
+<label for="covid">Do you have any <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">covid-19 symptoms?</a></label>
+<input type="checkbox" id="covid" name="covid"><br><br>
 <input onclick="submission()" type="button" value="Do I want to play Tennis?"><br><br>
 <p id="result"></p>
 <script>
@@ -36,7 +38,9 @@ title: Taylor's Tennis Helper
         if(parseInt(document.getElementById("time").value.replace(":",""))>2000||parseInt(document.getElementById("time").value.replace(":",""))<600){
             result="So you are going to play tennis while sleeping? In the middle of the night? Insubordinate and churlish! I forbade it."
         }
-        
+        if(document.getElementById("covid").checked){
+            result="PLEASE STAY AT HOME! Get a negative test result before unnecessarily interacting with anyone else. I'm begging you, do it for the safety of your community. Everyone is tired of the restrictions placed on us by covid but remaining vigilant is the best way to lift those restrictions as soon as possible. While you wait for your test result use some tiktok to pass the time. 9517"
+        }
         document.getElementById("result").innerHTML=result
     }
 </script>
